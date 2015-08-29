@@ -103,7 +103,6 @@ def get_config():
     """
 
     config = SimpleConfig(content='[PRIVATE]\n'
-                                  'last_post_id = -1\n'
                                   'ppd = 5')
     if not config.exists():
         config.create()
@@ -118,9 +117,6 @@ def set_up():
     """
 
     return set_config(get_config())
-    # config = get_config()
-    # set_config(config)
-    # return config
 
 def save_audios(audios):
     """

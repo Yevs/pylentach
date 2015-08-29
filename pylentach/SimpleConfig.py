@@ -20,6 +20,7 @@ class SimpleConfig(ConfigParser):
 
         :return: Boolean value to check file existance
         """
+
         return os.path.isfile(self.path)
 
     def create(self):
@@ -28,6 +29,7 @@ class SimpleConfig(ConfigParser):
 
         :return: returns nothing
         """
+
         with open(self.path, 'w') as file:
             file.write(self.content)
 
@@ -37,6 +39,7 @@ class SimpleConfig(ConfigParser):
 
         :return: returns nothing
         """
+
         with open(self.path, 'w') as config_file:
             self.write(config_file)
 
@@ -46,7 +49,5 @@ class SimpleConfig(ConfigParser):
 
         :return: returns True if config file was loaded successfully
         """
-        res = self.read(self.path)
-        if not res:
-            return False
-        return True
+
+        return bool(self.read(self.path))

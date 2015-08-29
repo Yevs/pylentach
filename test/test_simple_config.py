@@ -8,7 +8,7 @@ class SimpleConfigTest(unittest.TestCase):
     def setUp(self):
         self.config = SimpleConfig()
 
-    def deleteIfExists(self):
+    def del_if_exists(self):
         if os.path.isfile(self.config.path):
             os.remove(self.config.path)
 
@@ -33,7 +33,7 @@ class SimpleConfigTest(unittest.TestCase):
         self.config = SimpleConfig()
 
     def test_load(self):
-        self.deleteIfExists()
+        self.del_if_exists()
         self.assertFalse(self.config.load())
 
     def test_save(self):
@@ -46,4 +46,4 @@ class SimpleConfigTest(unittest.TestCase):
         self.config = SimpleConfig()
 
     def tearDown(self):
-        self.deleteIfExists()
+        self.del_if_exists()

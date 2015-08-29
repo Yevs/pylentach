@@ -49,6 +49,10 @@ class PylentachTest(unittest.TestCase):
         self.get_post_datas = [
             ('{"a":[{"b":{"audio":{"url":"abc"}}}]}', {'a':[{'b':{'audio':{'url':'abc'}}}]}),
         ]
+        self.find_val_datas = [
+            (({'a':[{'b':{'audio':{'url':'abc'}}}]}, 'url'), ['abc']),
+            (({'a':[{'b':{'audio':{'url':'abc'}}}]}, 'audio'), [{'url':'abc'}]),
+        ]
 
     def test_get_post(self):
         for fake_data, expected in self.get_post_datas:
@@ -62,13 +66,18 @@ class PylentachTest(unittest.TestCase):
     def test_save_audio(self):
         with PatchContextManager('pylentach.lentach.urlopen', mockMethodChain(b'abc', ['read'])) \
              as m_urlopen:
-            lentach.save_audio('_', 'mocked_title')
-            assert os.path.isfile('mocked_title.mp3')
-            os.remove('mocked_title.mp3') #tear down
+            directory = os.path.dirname(__file__)
+            file = directory + '/mocked_performer/mocked_title.mp3'
+            lentach.save_audio('_', 'mocked_title', 'mocked_performer', music_dir=directory)
+            assert os.path.isfile(file)
+            os.remove(file) #tear down
 
 
     def test_find_val(self):
-        pass
+        for (dic, key), expected in self.find_val_datas:
+            for res, expect in zip(lentach.find_val(dic, key), expected):
+                self.assertEqual(res, expect)
 
     def tearDown(self):
-        pass
+        if os.path.isfile('mocked_title.mp3'):
+            os.remove('mocked_title.mp3')
