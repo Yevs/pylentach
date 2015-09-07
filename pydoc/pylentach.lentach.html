@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module pylentach.lentach</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="pylentach.html"><font color="#ffffff">pylentach</font></a>.lentach</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/eugene/projects/pylentach/pylentach/lentach.py">/home/eugene/projects/pylentach/pylentach/lentach.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="json.html">json</a><br>
+</td><td width="25%" valign=top><a href="os.html">os</a><br>
+</td><td width="25%" valign=top><a href="time.html">time</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="pylentach.lentach.html#bcolors">bcolors</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="bcolors">class <strong>bcolors</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Constants&nbsp;for&nbsp;teminal&nbsp;coloring<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>BOLD</strong> = '<font color="#c040c0">\x1b</font>[1m'</dl>
+
+<dl><dt><strong>ENDC</strong> = '<font color="#c040c0">\x1b</font>[0m'</dl>
+
+<dl><dt><strong>FAIL</strong> = '<font color="#c040c0">\x1b</font>[91m'</dl>
+
+<dl><dt><strong>HEADER</strong> = '<font color="#c040c0">\x1b</font>[95m'</dl>
+
+<dl><dt><strong>OKBLUE</strong> = '<font color="#c040c0">\x1b</font>[94m'</dl>
+
+<dl><dt><strong>OKGREEN</strong> = '<font color="#c040c0">\x1b</font>[92m'</dl>
+
+<dl><dt><strong>UNDERLINE</strong> = '<font color="#c040c0">\x1b</font>[4m'</dl>
+
+<dl><dt><strong>WARNING</strong> = '<font color="#c040c0">\x1b</font>[93m'</dl>
+
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-find_val"><strong>find_val</strong></a>(dic, search_key='audio')</dt><dd><tt>Finds&nbsp;all&nbsp;entries&nbsp;in&nbsp;nested&nbsp;dictionary/list&nbsp;<a href="builtins.html#object">object</a>&nbsp;whose&nbsp;key&nbsp;is&nbsp;search_key<br>
+&nbsp;<br>
+:param&nbsp;dic:&nbsp;dictionary&nbsp;<a href="builtins.html#object">object</a>&nbsp;to&nbsp;search&nbsp;in<br>
+:param&nbsp;search_key:&nbsp;key&nbsp;to&nbsp;search&nbsp;for&nbsp;in&nbsp;dictionary<br>
+:return:&nbsp;returns&nbsp;generator&nbsp;which&nbsp;yields&nbsp;found&nbsp;values</tt></dd></dl>
+ <dl><dt><a name="-get_config"><strong>get_config</strong></a>()</dt><dd><tt>Gets&nbsp;config&nbsp;if&nbsp;exists.&nbsp;If&nbsp;not&nbsp;creates&nbsp;new&nbsp;one.<br>
+&nbsp;<br>
+:return:&nbsp;returns&nbsp;config</tt></dd></dl>
+ <dl><dt><a name="-get_posts"><strong>get_posts</strong></a>(count=1, offset=0, domain='oldlentach')</dt><dd><tt>"<br>
+Returns&nbsp;last&nbsp;posts&nbsp;from&nbsp;lentach&nbsp;vk&nbsp;page<br>
+&nbsp;<br>
+:param&nbsp;count:&nbsp;number&nbsp;of&nbsp;posts&nbsp;returned<br>
+:return:&nbsp;returns&nbsp;nested&nbsp;dictionary&nbsp;containing&nbsp;last&nbsp;posts</tt></dd></dl>
+ <dl><dt><a name="-load_new_posts"><strong>load_new_posts</strong></a>(config)</dt><dd><tt>Loads&nbsp;audios&nbsp;from&nbsp;new&nbsp;posts&nbsp;<br>
+&nbsp;<br>
+:param&nbsp;config:&nbsp;config&nbsp;<a href="builtins.html#object">object</a><br>
+:return:&nbsp;returns&nbsp;nothing</tt></dd></dl>
+ <dl><dt><a name="-main"><strong>main</strong></a>()</dt></dl>
+ <dl><dt><a name="-parse_group"><strong>parse_group</strong></a>(group, config)</dt><dd><tt>Saves&nbsp;audios&nbsp;from&nbsp;a&nbsp;given&nbsp;group&nbsp;saving&nbsp;state&nbsp;in&nbsp;config<br>
+&nbsp;<br>
+:param&nbsp;group:&nbsp;config&nbsp;section&nbsp;<a href="builtins.html#object">object</a><br>
+:param&nbsp;config:&nbsp;SimpleConfig&nbsp;<a href="builtins.html#object">object</a><br>
+:return:&nbsp;returns&nbsp;nothing</tt></dd></dl>
+ <dl><dt><a name="-save_audio"><strong>save_audio</strong></a>(url, title, performer, music_dir='/home/eugene/Music')</dt><dd><tt>Saves&nbsp;audio&nbsp;from&nbsp;url&nbsp;on&nbsp;the&nbsp;computer<br>
+&nbsp;<br>
+:param&nbsp;url:&nbsp;URL&nbsp;to&nbsp;download&nbsp;from<br>
+:param&nbsp;title:&nbsp;name&nbsp;to&nbsp;be&nbsp;saved&nbsp;on&nbsp;disk&nbsp;with<br>
+:return:&nbsp;returns&nbsp;nothing</tt></dd></dl>
+ <dl><dt><a name="-save_audios"><strong>save_audios</strong></a>(audios)</dt><dd><tt>Saves&nbsp;audios&nbsp;echoing&nbsp;if&nbsp;successful&nbsp;or&nbsp;not<br>
+&nbsp;<br>
+:param&nbsp;audios:&nbsp;iterable&nbsp;of&nbsp;dictionaries&nbsp;representing&nbsp;audio<br>
+:return:&nbsp;return&nbsp;nothing</tt></dd></dl>
+ <dl><dt><a name="-set_config"><strong>set_config</strong></a>(config)</dt><dd><tt>Initializes&nbsp;config&nbsp;with&nbsp;data&nbsp;if&nbsp;needed<br>
+&nbsp;<br>
+:param&nbsp;config:&nbsp;SimpleConfig&nbsp;<a href="builtins.html#object">object</a><br>
+:return:&nbsp;returns&nbsp;config&nbsp;<a href="builtins.html#object">object</a></tt></dd></dl>
+ <dl><dt><a name="-set_up"><strong>set_up</strong></a>()</dt><dd><tt>Gets&nbsp;config,&nbsp;sets&nbsp;it&nbsp;up,&nbsp;and&nbsp;returns&nbsp;it.<br>
+&nbsp;<br>
+:return:&nbsp;returns&nbsp;config&nbsp;<a href="builtins.html#object">object</a></tt></dd></dl>
+</td></tr></table>
+</body></html>

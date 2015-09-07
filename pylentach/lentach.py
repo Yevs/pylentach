@@ -12,6 +12,7 @@ class bcolors:
     """
     Constants for teminal coloring
     """
+    
     HEADER = '\033[95m'
     OKBLUE = '\033[94m'
     OKGREEN = '\033[92m'
@@ -78,7 +79,8 @@ def set_config(config):
     """
     Initializes config with data if needed
 
-    :return: returns nothing
+    :param config: SimpleConfig object
+    :return: returns config object
     """
 
     for name in config:
@@ -136,6 +138,13 @@ def save_audios(audios):
             print(bcolors.OKGREEN, 'success', bcolors.ENDC)
 
 def parse_group(group, config):
+    """
+    Saves audios from a given group saving state in config
+
+    :param group: config section object
+    :param config: SimpleConfig object
+    :return: returns nothing
+    """
     ALLOWED_PER_SECOND = 3
     allowed = ALLOWED_PER_SECOND
     last_time = time.time()
@@ -176,6 +185,7 @@ def load_new_posts(config):
     :param config: config object
     :return: returns nothing
     """
+
     for name in config:
         group = config[name]
         if name != 'PRIVATE' and name != 'DEFAULT':
