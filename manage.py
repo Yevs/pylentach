@@ -1,6 +1,7 @@
 import sys
 import os
 
+# comment
 def main(args):
     if args[1] == 'start':
         os.system('python3 pylentach/lentach.py')
